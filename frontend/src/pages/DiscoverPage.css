@@ -1,0 +1,81 @@
+.discover-page { padding-top: 32px; }
+
+.discover-header { margin-bottom: 28px; }
+
+.discover-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.discover-subtitle {
+  font-size: 0.95rem;
+  color: var(--text2);
+}
+
+.discover-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.filter-search {
+  flex: 1;
+  min-width: 200px;
+  padding: 9px 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-family: var(--font);
+  outline: none;
+  transition: var(--transition);
+}
+
+.filter-search:focus { border-color: rgba(255,255,255,0.2); }
+.filter-search::placeholder { color: var(--text3); }
+
+.filter-select {
+  padding: 9px 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.875rem;
+  font-family: var(--font);
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 130px;
+}
+
+.filter-select:focus { border-color: rgba(255,255,255,0.2); }
+.filter-select option { background: var(--bg2); }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+  padding: 24px 0;
+}
+
+.page-info {
+  font-size: 0.9rem;
+  color: var(--text2);
+  min-width: 120px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .discover-filters { flex-direction: column; }
+  .filter-search, .filter-select { width: 100%; }
+}

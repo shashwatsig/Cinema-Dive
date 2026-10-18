@@ -1,0 +1,168 @@
+/* Dashboard.css */
+
+.dashboard {
+  padding: 2rem;
+}
+
+/* ── Banner ── */
+.dashboard-header {
+  margin-bottom: 2.5rem;
+}
+
+.dashboard-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(135deg, rgba(1, 180, 228, 0.18), rgba(139, 92, 246, 0.18));
+  border: 1px solid rgba(1, 180, 228, 0.25);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.6s ease-out both;
+}
+
+.banner-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.banner-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7dd3fc;
+  margin-bottom: 0.5rem;
+}
+
+.banner-content h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--text-color);
+  margin-bottom: 0.6rem;
+  font-weight: 800;
+}
+
+.banner-name {
+  background: linear-gradient(90deg, #01b4e4, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-sub {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+}
+
+.banner-features {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.banner-pill {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.banner-pill:hover {
+  background: rgba(1, 180, 228, 0.18);
+}
+
+/* ── Auth Required ── */
+.auth-required {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 60vh;
+  text-align: center;
+  padding: 3rem;
+}
+
+.auth-required h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.auth-required p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.auth-required a {
+  padding: 0.8rem 2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #01b4e4, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-required a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(1, 180, 228, 0.3);
+}
+
+/* ── Loading ── */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.loading-spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid var(--hover-color);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .dashboard-banner { padding: 2rem 1.5rem; }
+  .banner-features { gap: 0.5rem; }
+}
+
+/* Utility Classes */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
